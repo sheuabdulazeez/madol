@@ -128,26 +128,37 @@ class App extends Component {
      <div>
        <Router>
          <Header />
-         <Route exact path="/">
-           <Sliders sliders={this.madol.home.slider}/>
-           <main>
-             <Featured featured={this.madol.home.featured} />
-             <NewArrival newarrival={this.madol.home.newarrival}/>
-             <CommingSoon />
-           </main>
-         </Route>
-       <Route path="/series">
-         <Sliders sliders={this.madol.series.slider}/>
-         <main>
-            <Categories movies={this.madol.series.all}/>
-         </main>
-       </Route>
-       <Route path="/watch">
-         <Sliders sliders={this.madol.series.slider}/>
-         <main>
-            
-         </main>
-       </Route>
+         <Route exact path="/" render={props => (
+           <React.Fragment>
+             <Sliders sliders={this.madol.home.slider}/>
+            <main>
+              <Featured featured={this.madol.home.featured} />
+              <NewArrival newarrival={this.madol.home.newarrival}/>
+              <CommingSoon />
+            </main>
+           </React.Fragment>
+         )}/>
+           
+         
+       <Route path="/series" render={props => ( 
+         <React.Fragment>
+            <Sliders sliders={this.madol.series.slider}/>
+            <main>
+                <Categories movies={this.madol.series.all}/>
+            </main>
+         </React.Fragment>
+        )}/>
+         
+     
+       <Route path="/watch" render={props=>(
+         <React.Fragment>
+           <Sliders sliders={this.madol.series.slider}/>
+          <main>
+              
+          </main>
+         </React.Fragment>  
+       )}/>
+
        <Footer />
 
        </Router>
