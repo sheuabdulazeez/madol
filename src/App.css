@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  color:white;
+  text-decoration: none;
+}
+.w-100{
+  width:100%;
+}
+.p-1{
+  padding: 10px;
+}
+.pt-4{
+  padding-top: 40px;
+}
+.pb-4{
+  padding-bottom: 40px;
+}
+.pr-1{
+  padding-right:10px;
+}
+.mb-4{
+  margin-bottom: 40px;
+}
+.mb-6{
+  margin-bottom: 60px;
+}
+.mt-6{
+  margin-top: 60px;
+}
+.flex{
+  display: flex;
+}
+.grid-2{
+  display:grid;
+  grid-template-columns: 1fr  1fr;
+}
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.w-50{
+  width: 50%;
+}
+.ai-c{
+  align-items:center;
+}
+.p-relative{
+  position:relative;
+}
+.container{
+  padding:0 0.1em;
+}
+.justify-sb{
+  justify-content: space-between;
+}
+.justify-se{
+  justify-content: space-evenly;
+}
+.text-center{
+  text-align: center;
+}
+.r-curve{
+  border-radius: 50px;
+  border:1px solid white
+}
+.btn-trans{
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+/* Header Styling */
+header{
+  position: fixed;
+  width:100%;
+  background: rgb(19, 18, 18);
+  color:white;
+  padding: 15px 0;
+  box-shadow: 1px 1px 5px rgb(47, 47, 47);
+  z-index: 1;
+}
+header nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; 
+  padding:0 20px;
+}
+header nav .nav-links{
+  list-style: none;
+  justify-content: space-evenly;
+}
+header nav .nav-links .link{
+  color:white;
+  padding:10px 15px;
+  transition: border 200ms 200ms ease-in-out,
+              padding 300ms 300ms ease-in;
+}
+header nav .nav-links .active{
+  border-bottom: 3px solid  rgb(36, 204, 175);
+  padding:23px 15px;
+}
+header nav .nav-links .link:hover{
+  border-bottom: 3px solid  rgb(36, 204, 175);
+  padding:23px 15px;
+}
+
+
+header nav #search i{
+  cursor: pointer;
+}
+
+.outer-layer{
+  position: relative;
+  color:white;
+  max-height: 100vh;
+  height:90vh;
+  overflow: hidden;
+}
+.inner-layer{
+  position:absolute;
+  top:0;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.452);
+}
+
+.inner-layer .details{
+  padding: 150px 50px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  font-family: sans-serif;
+}
+.inner-layer .details div:first-child{padding: 15px 0;}
+.inner-layer .details h1{font-size: 70px;}
+.inner-layer .details h3{font-size: 20px;}
+
+.inner-layer .details div:nth-child(2){
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 0 50px 0;
+}
+
+.inner-layer .details div:last-child{padding: 50px 0; font-weight: 700;}
+.inner-layer .details div:last-child a i{padding: 0 15px 0 0;}
+
+
+.watch-link{
+  padding: 20px 40px;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 12px;
+  font-size: 18px;
+  transition: background 500ms 200ms ease-in-out,
+              border 400ms 100ms ease-in;
+}
+.watch-link:hover{
+  background: rgb(36, 204, 175);
+  border:1px solid rgb(36, 204, 175);
+}
+
+
+/* End  of Header Styling*/
+
+/* Main Styling */
+main{
+  background:#000706;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px 50px;
+}
+/* FeaturedMov Style */
+.mov-outer{
+  width: 320px;
+  height:200px;
+  border: none;
+  transition: border 700ms  100ms ease-in-out,
+              width 300ms 400ms ease-in-out,
+              height 300ms 400ms ease-in-out;
+  overflow: hidden;
+}
+.mov-outer-alt{
+  width: 320px;
+  height:200px;
+  border: none;
+  transition: border 700ms  100ms ease-in-out;
+  overflow: hidden;
+}
+.mov-outer-alt:hover{border: 2px solid rgb(36, 204, 175);}
+
+.mov-outer:hover{
+  border: 2px solid rgb(36, 204, 175);
+  width: 350px;
+  height:210px;
+}
+
+.cat-outer{
+  width: 320px;
+  height: 250px;
+  border: none;
+  transition: border 700ms  100ms ease-in-out;  
+}
+.cat-outer:hover > img{border: 2px solid rgb(76, 190, 171);}
+
+.cat-outer:hover .mov-inner .mov-details{transition: top 700ms 100ms ease-in-out;}
+.cat-outer:hover > .mov-inner .mov-details{
+  position: absolute;
+  bottom: 100px;
+  left: 10px;
+}
+
+.catebar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.catebar ul li a{
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: default;
+}
+.catebar ul li a.active{
+  background-color: rgb(5, 81, 168);
+}
+
+/* Footer Styling */
+footer{
+  background:#000706;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer .foot {
+  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: 2fr  1fr;
+}
+footer .foot a{
+  color: white;
+}
