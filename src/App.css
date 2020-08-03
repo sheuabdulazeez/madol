@@ -73,7 +73,7 @@ a{
   outline: none;
 }
 .hide-scroll::-webkit-scrollbar {
-  width: 0;
+ display: none;
   }
   .grey{
     color:rgb(149, 149, 149);
@@ -139,6 +139,7 @@ header nav #search i{
 
 .inner-layer .details{
   padding: 150px 50px;
+  padding-right: 0;
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
@@ -251,10 +252,35 @@ footer .foot a{
 
 
 @media screen and (max-width:790px){
+  header{
+    padding-bottom: 0;
+  }
   nav.desktop{
     display: none;
   }
   nav.mobile{
     display: block;
+    padding-bottom: 0;
+  }
+
+  nav.mobile .nav-links{
+    overflow-y: visible;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+    
+  }
+  header nav .nav-links .link{
+    color:white;
+    padding:2px 15px;
+    transition: border 200ms 200ms ease-in-out,
+                padding 300ms 300ms ease-in;
+  }
+  header nav .nav-links .active{
+    border-bottom: 3px solid  rgb(36, 204, 175);
+    padding-bottom: 5px;
+  }
+  header nav .nav-links .link:hover{
+    border-bottom: 3px solid  rgb(36, 204, 175);
+    padding-bottom: 5px;
   }
 }
