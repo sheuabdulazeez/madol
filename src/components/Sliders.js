@@ -10,8 +10,8 @@ class Sliders extends Component {
                 <div className="outer-layer">
                     <img src={this.urls[0]} 
                     alt="" width="100%" height="100%"/>
-                     <div className="inner-layer">
-                        <div className="details">
+                     <div className="inner-layer row">
+                        <div className="details col-sm-12 col-lg-6">
                             <div>
                                 <h1>{this.titles[0]}</h1>
                                 <h3>{this.titles[1]}</h3>

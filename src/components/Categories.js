@@ -17,8 +17,8 @@ class Categories extends Component {
                 </div>
                 <div >
                     
-                    <div className="grid-3 ai-c w-100">
-                        <Cates movies={this.props.movies} className="cat-outer p-relative mb-4"/>
+                    <div className="row ai-c w-100">
+                        <Cates movies={this.props.movies} className="cat-outer p-relative mb-4 col-sm-12 col-lg-4"/>
                       
                     </div>
                    <div  className="text-center mb-4">

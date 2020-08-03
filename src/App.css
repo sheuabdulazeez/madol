@@ -4,7 +4,7 @@
 }
 a{
   color:white;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .w-100{
   width:100%;
@@ -72,6 +72,12 @@ a{
   cursor: pointer;
   outline: none;
 }
+.hide-scroll::-webkit-scrollbar {
+  width: 0;
+  }
+  .grey{
+    color:rgb(149, 149, 149);
+  }
 /* Header Styling */
 header{
   position: fixed;
@@ -85,8 +91,11 @@ header{
 header nav{
   display: flex;
   justify-content: space-evenly;
-  align-items: center; 
+ align-items: center; 
   padding:0 20px;
+}
+nav.mobile{
+  display: none;
 }
 header nav .nav-links{
   list-style: none;
@@ -100,11 +109,11 @@ header nav .nav-links .link{
 }
 header nav .nav-links .active{
   border-bottom: 3px solid  rgb(36, 204, 175);
-  padding:23px 15px;
+  padding-bottom: 23px;
 }
 header nav .nav-links .link:hover{
   border-bottom: 3px solid  rgb(36, 204, 175);
-  padding:23px 15px;
+  padding-bottom: 23px;
 }
 
 
@@ -132,7 +141,6 @@ header nav #search i{
   padding: 150px 50px;
   display: flex;
   flex-direction: column;
-  width: 40%;
   font-family: sans-serif;
 }
 .inner-layer .details div:first-child{padding: 15px 0;}
@@ -156,6 +164,7 @@ header nav #search i{
   font-size: 18px;
   transition: background 500ms 200ms ease-in-out,
               border 400ms 100ms ease-in;
+  color: white !important;
 }
 .watch-link:hover{
   background: rgb(36, 204, 175);
@@ -173,7 +182,7 @@ main{
   padding: 10px 50px;
 }
 /* FeaturedMov Style */
-.mov-outer{
+.mov-outer img{
   width: 320px;
   height:200px;
   border: none;
@@ -182,24 +191,21 @@ main{
               height 300ms 400ms ease-in-out;
   overflow: hidden;
 }
-.mov-outer-alt{
-  width: 320px;
+.mov-outer-alt img{
   height:200px;
   border: none;
   transition: border 700ms  100ms ease-in-out;
-  overflow: hidden;
 }
-.mov-outer-alt:hover{border: 2px solid rgb(36, 204, 175);}
+.mov-outer-alt:hover > img{border: 2px solid rgb(36, 204, 175);}
 
-.mov-outer:hover{
+.mov-outer:hover > img{
   border: 2px solid rgb(36, 204, 175);
   width: 350px;
   height:210px;
 }
 
 .cat-outer{
-  width: 320px;
-  height: 250px;
+  height: 300px;
   border: none;
   transition: border 700ms  100ms ease-in-out;  
 }
@@ -232,12 +238,23 @@ footer{
   background:#000706;
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow:hidden;
+  border-top: 1px solid grey;
 }
 footer .foot {
   padding: 30px 40px;
-  display: grid;
-  grid-template-columns: 2fr  1fr;
 }
 footer .foot a{
   color: white;
+}
+
+
+
+@media screen and (max-width:790px){
+  nav.desktop{
+    display: none;
+  }
+  nav.mobile{
+    display: block;
+  }
 }

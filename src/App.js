@@ -40,6 +40,16 @@ class App extends Component {
             id:3,
             img: 'https://www.screengeek.net/wp-content/uploads/2018/12/venom-movie.jpg',
             title: "Venom"
+          },
+          {
+            id:2,
+            img: 'https://upload.wikimedia.org/wikipedia/en/f/fe/1917_%282019%29_Film_Poster.jpeg',
+            title: "Time"
+          },
+          {
+            id:3,
+            img: 'https://www.screengeek.net/wp-content/uploads/2018/12/venom-movie.jpg',
+            title: "Venom"
           }   
       ],
       newarrival:[

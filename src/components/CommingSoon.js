@@ -7,15 +7,15 @@ class CommingSoon extends Component {
         return(
             <div className="mt-6">
                <h2 className="pb-4 text-center">COMING SOON</h2>
-               <div className="grid-2  w-100">
-                   <div className="left w-100">
+               <div className="row">
+                   <div className="col-sm-12 col-lg-6 mb-5">
                         <img src="https://image-cdn.essentiallysports.com/wp-content/uploads/20200626165844/Untitled-design-1-2-1600x900.jpg" 
-                        alt="" width="92%" height="500px"/>
+                        alt="" width="100%" height="500px"/>
                     </div>
-                    <div className="right w-100">
+                    <div className="col-sm-12 col-lg-6">
                             <div className="mb-6">
                                 <h1>MONEY HEIST</h1>
-                                <pre>1hr 59min   Action,Adventure,Stealing   May 18, 2020 (SPAIN)</pre>
+                                <p className="grey">1hr 59min   Action,Adventure,Stealing   May 18, 2020 (SPAIN)</p>
                             </div>
                             <p className="pb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo atque, 
