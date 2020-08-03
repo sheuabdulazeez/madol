@@ -16,7 +16,7 @@ class Movie extends Component {
         
         return(
             <div className={this.props.className}>
-                <img src={this.props.movie.img} alt={this.props.title} width="100%"height="100%"/>
+                <img src={this.props.movie.img} alt={this.props.title} width={this.props.imgWidth}  height="100%"/>
                 <div className="mov-inner" style={this.movStyle}>
                     <div className="mov-details">
                         <h2>{this.props.movie.title}</h2>

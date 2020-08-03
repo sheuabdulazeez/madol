@@ -184,13 +184,13 @@ main{
 }
 /* FeaturedMov Style */
 .mov-outer img{
-  width: 320px;
   height:200px;
   border: none;
   transition: border 700ms  100ms ease-in-out,
               width 300ms 400ms ease-in-out,
               height 300ms 400ms ease-in-out;
   overflow: hidden;
+
 }
 .mov-outer-alt img{
   height:200px;
@@ -271,11 +271,12 @@ footer .foot a{
   }
   header nav .nav-links .link{
     color:white;
+    font-size: 13px;
     padding:2px 15px;
     transition: border 200ms 200ms ease-in-out,
                 padding 300ms 300ms ease-in;
   }
-  header nav .nav-links .active{
+  header nav .nav-links .link.active{
     border-bottom: 3px solid  rgb(36, 204, 175);
     padding-bottom: 5px;
   }
